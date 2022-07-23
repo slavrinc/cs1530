@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 
+
 /**
  *
  * @author Sam
@@ -17,6 +18,10 @@ public class DenialAppealSystem extends javax.swing.JFrame {
         denialList.setVisible(false);
         letterGenPanel.setVisible(false);
         letterGenTransBgPanel.setBackground(new Color(255,255,255,140));
+        jSeparator1.setBackground(new Color(255,255,255,0));
+        jSeparator2.setBackground(new Color(255,255,255,0));
+        saveAppealReasonCheckBox.setBackground(new Color(255,255,255,0));
+        
     }
 
     /**
@@ -50,6 +55,29 @@ public class DenialAppealSystem extends javax.swing.JFrame {
         welcome1 = new javax.swing.JLabel();
         logoutButton1 = new javax.swing.JButton();
         letterGenTransBgPanel = new javax.swing.JPanel();
+        ptNameLabel = new javax.swing.JLabel();
+        ptDosLabel = new javax.swing.JLabel();
+        procLabel = new javax.swing.JLabel();
+        dxLabel = new javax.swing.JLabel();
+        attPhysLabel = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        insCoLabel = new javax.swing.JLabel();
+        insCoAdd1 = new javax.swing.JLabel();
+        insCoAdd2 = new javax.swing.JLabel();
+        insCoAdd3 = new javax.swing.JLabel();
+        insCoLabel1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        ptDenialReasonLabel = new javax.swing.JLabel();
+        preGenAppealReasonLabel = new javax.swing.JLabel();
+        preGenAppealReasons = new javax.swing.JComboBox<>();
+        preGenAppealReasonLabel1 = new javax.swing.JLabel();
+        newAppealTitleTextField = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        saveAppealReasonCheckBox = new javax.swing.JCheckBox();
+        backButton = new javax.swing.JButton();
+        submit = new javax.swing.JButton();
+        coInsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Denial Appeal System - Login");
@@ -261,7 +289,7 @@ public class DenialAppealSystem extends javax.swing.JFrame {
                         .addComponent(welcome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addGap(60, 60, 60))
         );
         denialListLayout.setVerticalGroup(
             denialListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,16 +323,204 @@ public class DenialAppealSystem extends javax.swing.JFrame {
 
         letterGenTransBgPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        ptNameLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ptNameLabel.setForeground(new java.awt.Color(0, 153, 153));
+        ptNameLabel.setText("Patient Name:");
+
+        ptDosLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ptDosLabel.setForeground(new java.awt.Color(0, 153, 153));
+        ptDosLabel.setText("Date of Service:");
+
+        procLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        procLabel.setForeground(new java.awt.Color(0, 153, 153));
+        procLabel.setText("Procedure:");
+
+        dxLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        dxLabel.setForeground(new java.awt.Color(0, 153, 153));
+        dxLabel.setText("Diagnosis:");
+
+        attPhysLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        attPhysLabel.setForeground(new java.awt.Color(0, 153, 153));
+        attPhysLabel.setText("Attending Physician:");
+
+        jSeparator1.setForeground(new java.awt.Color(0, 153, 153));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        insCoLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        insCoLabel.setForeground(new java.awt.Color(0, 153, 153));
+        insCoLabel.setText("Insurance Company:");
+
+        insCoAdd1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        insCoAdd1.setForeground(new java.awt.Color(0, 153, 153));
+        insCoAdd1.setText("Address: (line1)");
+
+        insCoAdd2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        insCoAdd2.setForeground(new java.awt.Color(0, 153, 153));
+        insCoAdd2.setText("(line2)");
+
+        insCoAdd3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        insCoAdd3.setForeground(new java.awt.Color(0, 153, 153));
+        insCoAdd3.setText("(line3/city,state zip)");
+
+        insCoLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        insCoLabel1.setForeground(new java.awt.Color(0, 153, 153));
+        insCoLabel1.setText("Policy Number:");
+
+        jSeparator2.setForeground(new java.awt.Color(0, 153, 153));
+
+        ptDenialReasonLabel.setBackground(new java.awt.Color(0, 153, 153));
+        ptDenialReasonLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ptDenialReasonLabel.setForeground(new java.awt.Color(0, 153, 153));
+        ptDenialReasonLabel.setText("Denial Reason: ");
+
+        preGenAppealReasonLabel.setBackground(new java.awt.Color(0, 153, 153));
+        preGenAppealReasonLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        preGenAppealReasonLabel.setForeground(new java.awt.Color(0, 153, 153));
+        preGenAppealReasonLabel.setText("Appeal Reason: ");
+
+        preGenAppealReasons.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        preGenAppealReasons.setForeground(new java.awt.Color(0, 153, 153));
+        preGenAppealReasons.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Reason1", "Reason2", "Reason3", "Reason4" }));
+
+        preGenAppealReasonLabel1.setBackground(new java.awt.Color(0, 153, 153));
+        preGenAppealReasonLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        preGenAppealReasonLabel1.setForeground(new java.awt.Color(0, 153, 153));
+        preGenAppealReasonLabel1.setText("New Appeal:");
+
+        newAppealTitleTextField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        newAppealTitleTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        newAppealTitleTextField.setSelectionColor(new java.awt.Color(0, 153, 153));
+
+        jTextPane1.setDisabledTextColor(new java.awt.Color(153, 153, 153));
+        jScrollPane2.setViewportView(jTextPane1);
+
+        saveAppealReasonCheckBox.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        saveAppealReasonCheckBox.setForeground(new java.awt.Color(0, 153, 153));
+        saveAppealReasonCheckBox.setText("Save Entry?");
+        saveAppealReasonCheckBox.setContentAreaFilled(false);
+        saveAppealReasonCheckBox.setFocusPainted(false);
+        saveAppealReasonCheckBox.setFocusable(false);
+        saveAppealReasonCheckBox.setRequestFocusEnabled(false);
+        saveAppealReasonCheckBox.setRolloverEnabled(false);
+        saveAppealReasonCheckBox.setVerifyInputWhenFocusTarget(false);
+
         javax.swing.GroupLayout letterGenTransBgPanelLayout = new javax.swing.GroupLayout(letterGenTransBgPanel);
         letterGenTransBgPanel.setLayout(letterGenTransBgPanelLayout);
         letterGenTransBgPanelLayout.setHorizontalGroup(
             letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1026, Short.MAX_VALUE)
+            .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(saveAppealReasonCheckBox)
+                    .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jSeparator2)
+                        .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                            .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ptNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ptDosLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(procLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(dxLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(attPhysLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE))
+                            .addGap(18, 18, 18)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(insCoAdd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(insCoLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(insCoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE))
+                                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(insCoAdd3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+                                    .addComponent(insCoAdd2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(ptDenialReasonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                            .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(preGenAppealReasonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(preGenAppealReasonLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(newAppealTitleTextField)
+                                .addComponent(preGenAppealReasons, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addGap(35, 35, 35))
         );
         letterGenTransBgPanelLayout.setVerticalGroup(
             letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                        .addComponent(insCoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(insCoAdd1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(insCoAdd2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(insCoAdd3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(insCoLabel1))
+                    .addComponent(jSeparator1)
+                    .addGroup(letterGenTransBgPanelLayout.createSequentialGroup()
+                        .addComponent(ptNameLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ptDosLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(procLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dxLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(attPhysLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ptDenialReasonLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(preGenAppealReasonLabel)
+                    .addComponent(preGenAppealReasons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(letterGenTransBgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(preGenAppealReasonLabel1)
+                    .addComponent(newAppealTitleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(saveAppealReasonCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
+
+        backButton.setBackground(new java.awt.Color(0, 153, 153));
+        backButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        backButton.setForeground(new java.awt.Color(102, 102, 102));
+        backButton.setText("Back");
+        backButton.setOpaque(false);
+        backButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                returnToList(evt);
+            }
+        });
+
+        submit.setBackground(new java.awt.Color(0, 153, 153));
+        submit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        submit.setForeground(new java.awt.Color(102, 102, 102));
+        submit.setText("Submit");
+        submit.setOpaque(false);
+        submit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                submitAppeal(evt);
+            }
+        });
+
+        coInsButton.setBackground(new java.awt.Color(0, 153, 153));
+        coInsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        coInsButton.setForeground(new java.awt.Color(102, 102, 102));
+        coInsButton.setText("Co Ins");
+        coInsButton.setOpaque(false);
+        coInsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                patientResponsibility(evt);
+            }
+        });
 
         javax.swing.GroupLayout letterGenPanelLayout = new javax.swing.GroupLayout(letterGenPanel);
         letterGenPanel.setLayout(letterGenPanelLayout);
@@ -313,23 +529,34 @@ public class DenialAppealSystem extends javax.swing.JFrame {
             .addGroup(letterGenPanelLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(letterGenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(letterGenTransBgPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(letterGenPanelLayout.createSequentialGroup()
+                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coInsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(letterGenPanelLayout.createSequentialGroup()
                         .addComponent(welcome1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(213, Short.MAX_VALUE))
+                        .addComponent(logoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(letterGenTransBgPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
         letterGenPanelLayout.setVerticalGroup(
             letterGenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(letterGenPanelLayout.createSequentialGroup()
-                .addContainerGap(106, Short.MAX_VALUE)
+                .addContainerGap(112, Short.MAX_VALUE)
                 .addGroup(letterGenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(logoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(welcome1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(letterGenTransBgPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(letterGenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(coInsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49))
         );
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
@@ -437,6 +664,34 @@ public class DenialAppealSystem extends javax.swing.JFrame {
         
     }//GEN-LAST:event_denialListListMouseClicked
 
+    private void returnToList(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnToList
+        // TODO add your handling code here:
+        letterGenPanel.setVisible(false);
+        denialList.setVisible(true);
+        //add code to generate a new list from the db
+        setTitle("Denial Appeal System - Denial List");
+    }//GEN-LAST:event_returnToList
+
+    private void submitAppeal(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitAppeal
+        // TODO add your handling code here:
+        //calls generateDocument() and updateClaimStatus()
+        //if a new appeal reason was added, calls newAppeal() to save info
+        //in db
+        letterGenPanel.setVisible(false);
+        denialList.setVisible(true);
+        //add code to generate a new list from the db
+        setTitle("Denial Appeal System - Denial List");
+    }//GEN-LAST:event_submitAppeal
+
+    private void patientResponsibility(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patientResponsibility
+        // TODO add your handling code here:
+        letterGenPanel.setVisible(false);
+        denialList.setVisible(true);
+        //add code to change the claim status in DB
+        //add code to generate a new list from the db
+        setTitle("Denial Appeal System - Denial List");
+    }//GEN-LAST:event_patientResponsibility
+
     /**
      * @param args the command line arguments
      */
@@ -474,6 +729,9 @@ public class DenialAppealSystem extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel attPhysLabel;
+    private javax.swing.JButton backButton;
+    private javax.swing.JButton coInsButton;
     private javax.swing.JLabel connErr;
     private javax.swing.JPanel denialList;
     private javax.swing.JList<String> denialListList;
@@ -481,7 +739,17 @@ public class DenialAppealSystem extends javax.swing.JFrame {
     private javax.swing.JLabel denialReasonLabel;
     private javax.swing.JScrollPane denialScrollPane;
     private javax.swing.JLabel dosLabel;
+    private javax.swing.JLabel dxLabel;
+    private javax.swing.JLabel insCoAdd1;
+    private javax.swing.JLabel insCoAdd2;
+    private javax.swing.JLabel insCoAdd3;
+    private javax.swing.JLabel insCoLabel;
+    private javax.swing.JLabel insCoLabel1;
     private javax.swing.JLabel insuranceNameLabel;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextPane jTextPane1;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JPanel letterGenPanel;
     private javax.swing.JPanel letterGenTransBgPanel;
@@ -489,8 +757,18 @@ public class DenialAppealSystem extends javax.swing.JFrame {
     private javax.swing.JPanel loginPanel;
     private javax.swing.JButton logoutButton;
     private javax.swing.JButton logoutButton1;
+    private javax.swing.JTextField newAppealTitleTextField;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel patientNameLabel;
+    private javax.swing.JLabel preGenAppealReasonLabel;
+    private javax.swing.JLabel preGenAppealReasonLabel1;
+    private javax.swing.JComboBox<String> preGenAppealReasons;
+    private javax.swing.JLabel procLabel;
+    private javax.swing.JLabel ptDenialReasonLabel;
+    private javax.swing.JLabel ptDosLabel;
+    private javax.swing.JLabel ptNameLabel;
+    private javax.swing.JCheckBox saveAppealReasonCheckBox;
+    private javax.swing.JButton submit;
     private javax.swing.JPanel titlePanel;
     private javax.swing.JLabel userIcon;
     private javax.swing.JTextField username;
